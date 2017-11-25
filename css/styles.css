@@ -1,0 +1,105 @@
+/****************************
+          General
+****************************/
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 1px;
+}
+
+ul {
+  z-index: 3;
+}
+
+ul li {
+  margin-left: -9px;
+  font-size: 1.1em;
+  z-index: 3;
+}
+
+/****************************
+          Bootstrap
+****************************/
+
+.list-group-item {
+  background: #24292E;
+  border-radius: 0;
+  cursor: pointer;
+  border-bottom-color: #222;
+  border-top-color: #333;
+}
+
+.list-group-item:hover {
+  background-color: #80C0C0;
+}
+
+.form-control {
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+/****************************
+        Google Map
+****************************/
+
+#map {
+  height: 100%;
+}
+
+/****************************
+          Sidebar
+****************************/
+
+.heading {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+#sidebar {
+	background: #24292E;
+	width: 350px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: -350px;
+	top: 0px;
+	transition: left .4s ease;
+  z-index: 2;
+}
+
+#sidebar.visible {
+	left: 0px;
+	transition:left .4s ease;
+  z-index: 2;
+}
+
+/****************************
+          Hamburger
+****************************/
+
+#sidebar-btn {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 25px;
+  margin-top: 17px;
+  margin-bottom: 15px;
+	cursor: pointer;
+	position: absolute;
+	top: 0px;
+	right: -47px;
+  z-index: 2;
+}
+
+#sidebar-btn span {
+	height: 4px;
+	background: #fff;
+	margin-bottom: 5px;
+	display: block;
+  z-index: 2;
+}

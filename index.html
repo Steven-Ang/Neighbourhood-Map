@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Neighbourhood Map</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+
+        <!-- Main Heading -->
+        <h1 class="text-white text-center heading">San Francisco</h1>
+
+        <!-- Search Bar -->
+        <input data-bind="value: searchTerm, valueUpdate: 'afterkeydown'" class="form-control" placeholder="Search location...">
+
+        <!-- List of locations -->
+        <ul data-bind="foreach: filteredLocations" class="list-group">
+            <li class="text-white list-group-item" data-bind="text: title, click: $parent.toggleMarker"></li>
+        </ul>
+        <!-- End of List of Locations -->
+
+        <!-- Hamburger button -->
+        <div id="sidebar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- End of Hamburger button -->
+
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Google Map -->
+    <div id="map"></div>
+    <!-- End of Google Map -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- JS Script For the Sidebar-->
+    <script>
+        // When the hamburger button is clicked, show or hide the sidebar
+        $('#sidebar-btn').click(function() {
+            $('#sidebar').toggleClass('visible');
+        });
+    </script>
+    <script src="js/knockout-3.4.2.js"></script>
+    <script src="js/locations.js"></script>
+    <script src="js/mapStyles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5oDt9sWX8p6N5-WiPFNTixzno3DfONvQ&callback=initMap" onerror="mapError()" async defer></script>
+</body>
+
+</html>
