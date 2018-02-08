@@ -51,6 +51,13 @@ ul li {
   border-radius: 0;
   cursor: pointer;
   border: none;
+  padding: .88rem 1.25rem;
+}
+
+.list-group-item:first-child {
+  border-radius: 0;
+  cursor: pointer;
+  border: none;
 }
 
 .list-group-item:hover {
