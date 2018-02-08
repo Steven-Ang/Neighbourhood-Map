@@ -30,8 +30,7 @@ ul li {
   background: #24292E;
   border-radius: 0;
   cursor: pointer;
-  border-bottom-color: #222;
-  border-top-color: #333;
+  border: none;
 }
 
 .list-group-item:hover {
