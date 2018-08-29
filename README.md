@@ -1,6 +1,6 @@
 # Neighbourhood Map
 
-A single page application features a map of San Francisco showing the famous tourist attractions via markers. Additional information about the location will be displayed when the marker is clicked. By default, a list of the locations will be visible in the sidebar, click any one of them will make the info window appear. The search bar is provided to filter out the place.
+A single page application features a map of San Francisco showing the famous tourist attractions via markers. Additional information about the location will be displayed when the marker is clicked. By default, a list of the locations will be visible in the sidebar, click any one of them will make the info window appear. The search bar is provided to filter out the place. [Click](https://steven-ang.github.io/Neighbourhood-Map/) to view demo.
 
 # API
 
